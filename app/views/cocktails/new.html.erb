@@ -5,9 +5,9 @@
 
   <% if @cocktail.errors.any? %>
     <div class="errors-container">
-      <ul>
+      <ul style="color:red;list-style: none;font-weight:bold;">
         <% @cocktail.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <li>Error: <%= message %></li>
         <% end %>
       </ul>
     </div>
