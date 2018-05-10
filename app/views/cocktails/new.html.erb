@@ -1,0 +1,25 @@
+<!-- <h1>Creating a cocktail</h1>
+<hr> -->
+
+<%= form_for @cocktail do |f| %>
+
+  <% if @cocktail.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @cocktail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, 'C O C K T A I L - N A M E', style: "color: white; font-weight: bold;" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+  <div style="padding-top:10px;">
+    <i style="color: white;" class="fa fa-history"></i> <%= link_to "Back to index",  cocktails_path, style: "color: white; text-align:center;" %>
+  </div>
+<% end %>

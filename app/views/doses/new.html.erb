@@ -1,0 +1,37 @@
+<!-- <h1>Adding a dose for <%= @cocktail.name %></h1>
+<hr> -->
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+
+  <% if @cocktail.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @cocktail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if @dose.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @dose.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :description, 'D O S E - D E S C R I P T I O N', style: "color: white; font-weight: bold;" %>
+    <%= f.text_field :description, label: false, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredient, 'S E L E C T - I N G R E D I E N T', style: "color: white; font-weight: bold;" %>
+    <%= f.association :ingredient, label: false, class: "form-control" %>
+  </div>
+  <%= f.submit "Add a new dose", class: "btn btn-primary" %>
+  <div style="padding-top:10px;">
+    <i style="color: white;" class="fa fa-history"></i> <%= link_to "Back to index",  cocktails_path, style: "color: white; text-align:center;" %>
+  </div>
+<% end %>
