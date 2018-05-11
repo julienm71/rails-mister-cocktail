@@ -36,6 +36,7 @@ gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
 gem 'simple_form'
 gem 'jquery-rails'
+gem 'figaro'
 ruby '2.4.3'
 
 # Use Capistrano for deployment
