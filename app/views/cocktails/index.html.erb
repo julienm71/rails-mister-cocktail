@@ -3,7 +3,7 @@
 <div class="flex">
   <% @cocktails.each do |cocktail| %>
     <div class="card" style="width: 18rem; margin:10px;">
-      <img class="card-img-top" src="http://www.cafedellastazione.fr/wp-content/uploads/2018/01/cocktails.jpg" alt="Card image cap">
+      <img class="card-img-top" src="<%= cocktail.photo %>" alt="Card image cap">
       <div class="card-body">
 
         <h5 class="card-title"><%= cocktail.name %> -

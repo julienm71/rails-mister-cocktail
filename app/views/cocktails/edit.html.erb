@@ -17,6 +17,11 @@
       <%= f.label :name, 'C O C K T A I L - N A M E', style: "color: white; font-weight: bold;" %>
       <%= f.text_field :name, class: "form-control" %>
   </div>
+  <div class="form-group">
+    <%= f.label :photo, 'C O C K T A I L - P I C T U R E', style: "color: white; font-weight: bold;" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+  </div>
 
   <%= f.submit class: "btn btn-primary" %>
   <div style="padding-top:10px;color:white;">
